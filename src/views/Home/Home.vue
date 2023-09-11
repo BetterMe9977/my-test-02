@@ -62,11 +62,6 @@ import card04 from "@/assets/img/card-04.jpeg";
 
 export default {
   name: "MyTest02Home",
-  // components: {
-  //   Header,
-  //   Footer
-  // },
-
   data() {
     return {
       cardList: [

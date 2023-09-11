@@ -4,11 +4,14 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import $ from "jquery";
+import VueParticles from "vue-particles";
+
 import "./assets/css/normalize.styl";
 import "./assets/css/common.styl";
 window.$ = $;
 window.jQuery = $;
 Vue.config.productionTip = false;
+Vue.use(VueParticles);
 
 /* eslint-disable no-new */
 new Vue({

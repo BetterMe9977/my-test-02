@@ -68,6 +68,7 @@ export default {
   .nav
     display: flex
     align-items: center
+    height 100%
     .nav-item
       width: 130px
       color: #111;
@@ -77,11 +78,13 @@ export default {
       display: flex
       align-items: center
       justify-content: center
+      height 100%
       flex-direction: column
       .nav-item-title
-        margin-bottom: 5px
-    :hover,
-    .header-link-active
+        // margin-bottom: 5px
+        line-height: 1
+    .nav-item:hover,
+    .link-active
       background-color: #DD7B0F
       background-image: linear-gradient(to right, #DD7B0F 0%, #DE1B10 51%, #DD7B0F 100%)
       color: #fff !important
@@ -97,4 +100,7 @@ export default {
   .header
     .nav
       display: none
+    .header-logo
+      .logo-txt
+        font-size: 16px
 </style>

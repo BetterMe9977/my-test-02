@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <Header :dataSource="navList" />
-    <router-view />
     <div class="nav-toggle">
       <div>
         <span></span>
@@ -22,6 +21,9 @@
         </router-link>
       </nav>
     </aside>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
     <Footer />
     <div class="overlay"></div>
   </div>
@@ -103,7 +105,7 @@ export default {
         justify-content: center
         color: #111
       :hover,
-      .header-link-active
+      .link-active
         background-color: #DD7B0F
         background-image: linear-gradient(to right, #DD7B0F 0%, #DE1B10 51%, #DD7B0F 100%)
         color: #fff !important
