@@ -1,11 +1,10 @@
 <template>
-  <div class="services">
-    <div class="services-content">
-      <Particles />
+  <div class="contact">
+    <div class="contact-content">
+      <Particles :routeName="$route.name" />
       <div class="main-content bg-img">
         <div class="content-wrapper bx">
           <div class="content-box">
-            <RouteNav :childs="this.$route.meta.childs" />
             <keep-alive>
               <router-view></router-view>
             </keep-alive>
@@ -18,26 +17,19 @@
 
 <script>
 import Particles from "@/components/Particles/Particles";
-import RouteNav from "@/components/RouteNav/RouteNav";
+
 export default {
-  name: "MyTest02Services",
+  name: "MyTest02Contact",
   components: {
-    Particles,
-    RouteNav
+    Particles
   },
 
   data() {
-    return {
-      routeNavList: [
-        {
-          path: ""
-        }
-      ]
-    };
+    return {};
   },
 
   mounted() {
-    // console.log(this.$route.meta.childs);
+    console.log(this.$route);
   },
 
   methods: {}
@@ -45,8 +37,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.services
-  .services-content
+.contact
+  .contact-content
     .main-content
       width: 100%;
       padding: 0 25px;
@@ -57,8 +49,8 @@ export default {
         .content-box
           padding: 20px 60px 100px 60px
 @media screen and (max-width: 1039px)
-  .services
-    .services-content
+  .contact
+    .contact-content
       .main-content
         .content-wrapper
           .content-box
@@ -66,8 +58,8 @@ export default {
             padding: 20px 40px 80px 40px;
 
 @media screen and (max-width: 767px)
-  .services
-    .services-content
+  .contact
+    .contact-content
       .main-content
         padding: 0 15px
         .content-wrapper

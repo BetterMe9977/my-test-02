@@ -16,8 +16,10 @@
     >
     </vue-particles>
     <div class="title">
-      <span class="txt">{{ $route.meta.parent.enName }}</span>
-      {{ $route.meta.parent.jaName }}
+      <span class="txt">{{
+        $route.meta.enName || $route.meta.parent.enName
+      }}</span>
+      {{ $route.meta.jaName || $route.meta.parent.jaName }}
     </div>
     <BreadNav />
   </div>

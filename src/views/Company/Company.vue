@@ -1,6 +1,6 @@
 <template>
-  <div class="services">
-    <div class="services-content">
+  <div class="company">
+    <div class="company-content">
       <Particles />
       <div class="main-content bg-img">
         <div class="content-wrapper bx">
@@ -19,34 +19,27 @@
 <script>
 import Particles from "@/components/Particles/Particles";
 import RouteNav from "@/components/RouteNav/RouteNav";
+
 export default {
-  name: "MyTest02Services",
+  name: "MyTest02Company",
   components: {
     Particles,
     RouteNav
   },
 
   data() {
-    return {
-      routeNavList: [
-        {
-          path: ""
-        }
-      ]
-    };
+    return {};
   },
 
-  mounted() {
-    // console.log(this.$route.meta.childs);
-  },
+  mounted() {},
 
   methods: {}
 };
 </script>
 
 <style lang="stylus" scoped>
-.services
-  .services-content
+.company
+  .company-content
     .main-content
       width: 100%;
       padding: 0 25px;
@@ -57,8 +50,8 @@ export default {
         .content-box
           padding: 20px 60px 100px 60px
 @media screen and (max-width: 1039px)
-  .services
-    .services-content
+  .company
+    .company-content
       .main-content
         .content-wrapper
           .content-box
@@ -66,8 +59,8 @@ export default {
             padding: 20px 40px 80px 40px;
 
 @media screen and (max-width: 767px)
-  .services
-    .services-content
+  .company
+    .company-content
       .main-content
         padding: 0 15px
         .content-wrapper

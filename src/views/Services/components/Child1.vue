@@ -78,7 +78,7 @@
 import card03 from "@/assets/img/card-03.jpeg";
 
 export default {
-  name: "MyTest02Child1",
+  name: "MyTest02ServicesChild1",
 
   data() {
     return {
@@ -239,8 +239,8 @@ export default {
       .ja
         padding: 0 15px;
     .info-img
-      height: 320px
-      width 320px
+      height: 320px;
+      width: 100%;
     .section1
       flex-wrap: wrap
       .section1-left

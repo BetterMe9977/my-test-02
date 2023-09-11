@@ -5,13 +5,27 @@
         <router-link to="/" class="icon-home">
           <img :src="iconHome" class="home" alt="" />
         </router-link>
-        <router-link :to="$route.meta.parent.path" class="item">
+
+        <router-link
+          :to="
+            $route.name === 'Contact' ? $route.path : $route.meta.parent.path
+          "
+          class="item"
+        >
           <span class="right-arrow">></span>
-          {{ $route.meta.parent.jaName }}
+          {{
+            $route.name === "Contact"
+              ? $route.meta.jaName
+              : $route.meta.parent.jaName
+          }}
         </router-link>
-        <router-link :to="$route.path" class="item">
-          <span class="right-arrow bold">></span>
-          {{ $route.meta.jaName }}
+        <router-link
+          v-if="!($route.name === 'Contact')"
+          :to="$route.path"
+          class="item"
+        >
+          <span class="right-arrow">></span>
+          <span class="bold">{{ $route.meta.jaName }}</span>
         </router-link>
       </ul>
     </div>
@@ -31,7 +45,6 @@ export default {
   },
 
   mounted() {
-    console.log("-------");
     console.log(this.$route);
   },
 
@@ -59,6 +72,8 @@ export default {
         .home
           width: 16px
           height: 16px
+      .item:last-child
+        font-weight: 700
       .item
         font-size: 14px
         color: #111
