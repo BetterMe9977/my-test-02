@@ -12,7 +12,9 @@
           "
           class="item"
         >
-          <span class="right-arrow">></span>
+          <span class="right-arrow iconfont" style="font-weight: 100;">
+            &#xe62b;</span
+          >
           {{
             $route.name === "Contact"
               ? $route.meta.jaName
@@ -24,7 +26,9 @@
           :to="$route.path"
           class="item"
         >
-          <span class="right-arrow">></span>
+          <span class="right-arrow iconfont" style="font-weight: 100;"
+            >&#xe62b;</span
+          >
           <span class="bold">{{ $route.meta.jaName }}</span>
         </router-link>
       </ul>
@@ -44,9 +48,7 @@ export default {
     };
   },
 
-  mounted() {
-    console.log(this.$route);
-  },
+  mounted() {},
 
   methods: {}
 };

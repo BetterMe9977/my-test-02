@@ -4,7 +4,7 @@ import Home from "@/views/Home/Home";
 import Services from "@/views/Services/Services";
 import Company from "@/views/Company/Company";
 import Recruit from "@/views/Recruit/Recruit";
-import Contact from "@/views/contact/Contact";
+import Contact from "@/views/Contact/Contact";
 Vue.use(Router);
 
 export default new Router({
@@ -373,39 +373,9 @@ export default new Router({
       name: "Contact",
       meta: {
         jaName: "お問い合わせ",
-        enName: "Contact"
+        enName: "CONTACT"
       },
-      component: Contact,
-      children: [
-        {
-          path: "child1",
-          name: "Contact-Child1",
-          component: () => import("@/views/Contact/components/Child1"),
-          meta: {
-            parent: {
-              jaName: "お問い合わせ",
-              enName: "Contact",
-              path: "/contact"
-            },
-            jaName: "Contact-Child1",
-            enName: "Contact-Child1"
-          }
-        },
-        {
-          path: "child2",
-          name: "Contact-Child2",
-          component: () => import("@/views/Contact/components/Child2"),
-          meta: {
-            parent: {
-              jaName: "お問い合わせ",
-              enName: "Contact",
-              path: "/contact"
-            },
-            jaName: "Contact-Child2",
-            enName: "Contact-Child2"
-          }
-        }
-      ]
+      component: Contact
     },
     {
       path: "/",

@@ -3,17 +3,15 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
-import $ from "jquery";
 import VueParticles from "vue-particles";
-
+import "./assets/utils/JQuery/jquery-3.4.1.min";
+import "./assets/utils/validationEngine/jquery.validationEngine.min";
+import "./assets/utils/validationEngine/languages/jquery.validationEngine-ja";
 import "./assets/css/normalize.styl";
 import "./assets/css/common.styl";
-window.$ = $;
-window.jQuery = $;
+import "./assets/css/validationEngine.jquery.styl";
 Vue.config.productionTip = false;
 Vue.use(VueParticles);
-
-/* eslint-disable no-new */
 new Vue({
   el: "#app",
   router,

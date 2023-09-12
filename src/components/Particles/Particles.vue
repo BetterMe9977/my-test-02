@@ -37,10 +37,7 @@ export default {
     return {};
   },
 
-  mounted() {
-    console.log(4444);
-    console.log(this.$route);
-  },
+  mounted() {},
 
   methods: {}
 };

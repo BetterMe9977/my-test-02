@@ -1,0 +1,23 @@
+{
+  "id": "4248422",
+  "name": "my-test-02",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "287167",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "6664192",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}

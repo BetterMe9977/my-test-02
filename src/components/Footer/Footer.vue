@@ -28,23 +28,29 @@
       <div class="right">
         <ul class="items-wrapper">
           <li class="item">
-            <router-link to="" class="item-title">事業内容</router-link>
+            <router-link to="/services" class="item-title"
+              >事業内容</router-link
+            >
             <ul class="item-child-wrapper">
               <li>
-                <router-link class="item-child" to=""
+                <router-link class="item-child" to="/services"
                   >ブランディング</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="">発達</router-link>
+                <router-link class="item-child" to="/services/child2"
+                  >発達</router-link
+                >
               </li>
               <li>
-                <router-link class="item-child" to=""
+                <router-link class="item-child" to="/services/child3"
                   >マーケティング</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="">私たちの仕事</router-link>
+                <router-link class="item-child" to="/services/child4"
+                  >私たちの仕事</router-link
+                >
               </li>
             </ul>
           </li>
@@ -52,16 +58,18 @@
             <router-link to="" class="item-title">クイックリンク</router-link>
             <ul class="item-child-wrapper">
               <li>
-                <router-link class="item-child" to=""
-                  >私たちについて</router-link
+                <router-link class="item-child" to="/recruit"
+                  >採用情報</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="">利用規約</router-link>
+                <router-link class="item-child" to="/recruit"
+                  >中途採用</router-link
+                >
               </li>
               <li>
-                <router-link class="item-child" to=""
-                  >プライバシーポリシー</router-link
+                <router-link class="item-child" to="/recruit/child2"
+                  >新卒採用</router-link
                 >
               </li>
             </ul>

@@ -23,7 +23,7 @@
                   <p class="desc" ref="myEleP">
                     {{ card.desc }}
                   </p>
-                  <router-link to="" class="more">
+                  <router-link :to="card.path" class="more">
                     MORE INFO
                   </router-link>
                 </div>
@@ -71,7 +71,7 @@ export default {
           titleBottom: "ブランディング",
           desc:
             "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
-          link: ""
+          path: "/services"
         },
         {
           img: card02,
@@ -79,7 +79,7 @@ export default {
           titleBottom: "発達",
           desc:
             "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
-          link: ""
+          path: "/services/child2"
         },
         {
           img: card03,
@@ -87,7 +87,7 @@ export default {
           titleBottom: "マーケティング",
           desc:
             "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
-          link: ""
+          path: "/services/child3"
         },
         {
           img: card04,
@@ -95,7 +95,7 @@ export default {
           titleBottom: "私たちの仕事",
           desc:
             "ロボットトラクタやスマートフォンで操作するビニルハウスの管理システムなどの活用により、農作業を自動化するアプリです。",
-          link: ""
+          path: "/services/child4"
         }
       ],
       date: new Date(),

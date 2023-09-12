@@ -1,11 +1,23 @@
 
 @font-face 
   font-family: 'Roboto Condensed';
-  src: url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+  src: url('../fonts/browserfonts/RobotoCondensed-Regular.ttf') format('truetype');
   /* 根据字体文件的路径和格式进行调整 */
   font-weight: normal;
   font-style: normal;
 
+@font-face 
+  font-family: 'iconfont';
+  src: url('../fonts/alifonts/iconfont.woff2') format('woff2'),
+       url('../fonts/alifonts/iconfont.woff') format('woff'),
+       url('../fonts/alifonts/iconfont.ttf') format('truetype');
+
+.iconfont 
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 .bx 
   max-width: 1120px;
@@ -31,3 +43,10 @@ body
   
 div
   box-sizing: border-box
+
+th,
+td,
+input,
+textarea
+  box-sizing: border-box
+  
