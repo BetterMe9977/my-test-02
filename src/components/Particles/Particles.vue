@@ -15,7 +15,7 @@
       class="particles-content"
     >
     </vue-particles>
-    <div class="title">
+    <div class="title" v-if="$route.meta.enName || $route.meta.parent.enName">
       <span class="txt">{{
         $route.meta.enName || $route.meta.parent.enName
       }}</span>
@@ -38,6 +38,7 @@ export default {
   },
 
   mounted() {
+    console.log(4444);
     console.log(this.$route);
   },
 

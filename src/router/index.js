@@ -180,7 +180,7 @@ export default new Router({
               path: "/company"
             },
             jaName: "会社概要",
-            enName: "Company-INFO",
+            enName: "PROFILE",
             childs: [
               {
                 path: "child1",
@@ -367,6 +367,7 @@ export default new Router({
         }
       ]
     },
+    // contact
     {
       path: "/contact",
       name: "Contact",

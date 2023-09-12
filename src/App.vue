@@ -21,9 +21,7 @@
         </router-link>
       </nav>
     </aside>
-    <keep-alive>
-      <router-view />
-    </keep-alive>
+    <router-view />
     <Footer />
     <div class="overlay"></div>
   </div>
@@ -68,6 +66,9 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    console.log(this.$route);
   }
 };
 </script>
