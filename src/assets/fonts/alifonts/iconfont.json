@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "33519",
+      "name": "home_fill",
+      "font_class": "homefill",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "2488123",
+      "name": "勾",
+      "font_class": "gou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "3255899",
+      "name": "樱花",
+      "font_class": "ziyuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
       "icon_id": "287167",
       "name": "右箭头",
       "font_class": "youjiantou",

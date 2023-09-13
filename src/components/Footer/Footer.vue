@@ -28,47 +28,110 @@
       <div class="right">
         <ul class="items-wrapper">
           <li class="item">
-            <router-link to="/services" class="item-title"
+            <router-link
+              to="/services"
+              @click.native="toTopHandler"
+              class="item-title"
               >事業内容</router-link
             >
             <ul class="item-child-wrapper">
               <li>
-                <router-link class="item-child" to="/services"
-                  >ブランディング</router-link
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/services"
+                  >ソリューション</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="/services/child2"
-                  >発達</router-link
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/services/child2"
+                  >開発実績</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="/services/child3"
-                  >マーケティング</router-link
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/services/child3"
+                  >自社製品</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="/services/child4"
-                  >私たちの仕事</router-link
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/services/child4"
+                  >特長</router-link
                 >
               </li>
             </ul>
           </li>
           <li class="item">
-            <router-link to="" class="item-title">クイックリンク</router-link>
+            <router-link
+              to="/company"
+              @click.native="toTopHandler"
+              class="item-title"
+              >企業情報</router-link
+            >
             <ul class="item-child-wrapper">
               <li>
-                <router-link class="item-child" to="/recruit"
-                  >採用情報</router-link
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/company"
+                  >会社概要</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="/recruit"
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/company/child2"
+                  >経営理念</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/company/child3"
+                  >組織図</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/company/child4"
+                  >アクセス</router-link
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <router-link
+              to="/recruit"
+              @click.native="toTopHandler"
+              class="item-title"
+              >採用情報</router-link
+            >
+            <ul class="item-child-wrapper">
+              <li>
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/recruit"
                   >中途採用</router-link
                 >
               </li>
               <li>
-                <router-link class="item-child" to="/recruit/child2"
+                <router-link
+                  @click.native="toTopHandler"
+                  class="item-child"
+                  to="/recruit/child2"
                   >新卒採用</router-link
                 >
               </li>
@@ -173,7 +236,7 @@ export default {
             opacity: .5
           .item-child-wrapper
             .item-child
-              transition: all 0.5s ease
+              // transition: all 0.5s ease
               color: #fff
             .item-child:hover
               opacity: .5
@@ -204,7 +267,8 @@ export default {
         margin-left: 0
         margin-right: 0
         .items-wrapper
-          .item:nth-child(2)
+          .item:nth-child(2),
+          .item:nth-child(3)
             display: none
           .item
             width 100%

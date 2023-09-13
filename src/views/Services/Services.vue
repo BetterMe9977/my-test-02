@@ -37,6 +37,8 @@ export default {
   },
 
   mounted() {
+    this.$toTopHandler();
+
     // console.log(this.$route.meta.childs);
   },
 

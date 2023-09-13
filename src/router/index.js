@@ -44,15 +44,15 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Services-Child3"
+                name: "開発実績"
               },
               {
                 path: "child3",
-                name: "Services-Child3"
+                name: "自社製品"
               },
               {
                 path: "child4",
-                name: "Services-Child4"
+                name: "特長"
               }
             ]
           }
@@ -67,8 +67,8 @@ export default new Router({
               enName: "SERVERICES",
               path: "/services"
             },
-            jaName: "Services-child2",
-            enName: "Services-CHILD2",
+            jaName: "開発実績",
+            enName: "ACHIEVEMENT",
             childs: [
               {
                 path: "child1",
@@ -76,22 +76,22 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Services-Child3"
+                name: "開発実績"
               },
               {
                 path: "child3",
-                name: "Services-Child3"
+                name: "自社製品"
               },
               {
                 path: "child4",
-                name: "Services-Child4"
+                name: "特長"
               }
             ]
           }
         },
         {
           path: "child3",
-          name: "Services-Child3",
+          name: "自社製品",
           component: () => import("@/views/Services/components/Child3"),
           meta: {
             parent: {
@@ -99,8 +99,8 @@ export default new Router({
               enName: "SERVERICES",
               path: "/services"
             },
-            jaName: "Services-child3",
-            enName: "Services-CHILD3",
+            jaName: "自社製品",
+            enName: "PRODUCT",
             childs: [
               {
                 path: "child1",
@@ -108,22 +108,22 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Services-Child3"
+                name: "開発実績"
               },
               {
                 path: "child3",
-                name: "Services-Child3"
+                name: "自社製品"
               },
               {
                 path: "child4",
-                name: "Services-Child4"
+                name: "特長"
               }
             ]
           }
         },
         {
           path: "child4",
-          name: "Services-Child4",
+          name: "特長",
           component: () => import("@/views/Services/components/Child4"),
           meta: {
             parent: {
@@ -131,8 +131,8 @@ export default new Router({
               enName: "SERVERICES",
               path: "/services"
             },
-            jaName: "Services-child4",
-            enName: "Services-CHILD4",
+            jaName: "特長",
+            enName: "FEATURE",
             childs: [
               {
                 path: "child1",
@@ -140,15 +140,15 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Services-Child3"
+                name: "開発実績"
               },
               {
                 path: "child3",
-                name: "Services-Child3"
+                name: "自社製品"
               },
               {
                 path: "child4",
-                name: "Services-Child4"
+                name: "特長"
               }
             ]
           }
@@ -188,11 +188,11 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Company-Child2"
+                name: "経営理念"
               },
               {
                 path: "child3",
-                name: "Company-Child3"
+                name: "組織図"
               },
               {
                 path: "child4",
@@ -203,7 +203,7 @@ export default new Router({
         },
         {
           path: "child2",
-          name: "Company-Child2",
+          name: "経営理念",
           component: () => import("@/views/Company/components/Child2"),
           meta: {
             parent: {
@@ -211,8 +211,8 @@ export default new Router({
               enName: "COMPANY",
               path: "/company"
             },
-            jaName: "Company-child2",
-            enName: "Company-CHILD2",
+            jaName: "経営理念",
+            enName: "POLICY",
             childs: [
               {
                 path: "child1",
@@ -220,11 +220,11 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Company-Child2"
+                name: "経営理念"
               },
               {
                 path: "child3",
-                name: "Company-Child3"
+                name: "組織図"
               },
               {
                 path: "child4",
@@ -235,7 +235,7 @@ export default new Router({
         },
         {
           path: "child3",
-          name: "Company-Child3",
+          name: "組織図",
           component: () => import("@/views/Company/components/Child3"),
           meta: {
             parent: {
@@ -243,8 +243,8 @@ export default new Router({
               enName: "COMPANY",
               path: "/company"
             },
-            jaName: "Company-child3",
-            enName: "Company-CHILD3",
+            jaName: "組織図",
+            enName: "ORGANIZATION",
             childs: [
               {
                 path: "child1",
@@ -252,11 +252,11 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Company-Child2"
+                name: "経営理念"
               },
               {
                 path: "child3",
-                name: "Company-Child3"
+                name: "組織図"
               },
               {
                 path: "child4",
@@ -284,11 +284,11 @@ export default new Router({
               },
               {
                 path: "child2",
-                name: "Company-Child2"
+                name: "経営理念"
               },
               {
                 path: "child3",
-                name: "Company-Child3"
+                name: "組織図"
               },
               {
                 path: "child4",

@@ -3,11 +3,15 @@
     <div class="home-content">
       <section class="banner-container">
         <div class="banner-wrapper bx">
-          <div class="banner-bg"></div>
-          <div class="banner-txt"></div>
+          <div class="covervid-wrapper">
+            <video class="covervid-video" autoplay loop muted>
+              <source :src="bgMp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- <div class="banner-txt"></div> -->
         </div>
       </section>
-      <section class="main-container">
+      <section class="main-container bg-img">
         <div class="main-container-wrapper bx">
           <div class="cards-container">
             <div class="card-items" v-for="card in cardList" :key="card.img">
@@ -59,6 +63,7 @@ import card01 from "@/assets/img/card-01.jpeg";
 import card02 from "@/assets/img/card-02.jpeg";
 import card03 from "@/assets/img/card-03.jpeg";
 import card04 from "@/assets/img/card-04.jpeg";
+import bgMp4 from "@/assets/video/bg-mp4.mp4";
 
 export default {
   name: "MyTest02Home",
@@ -67,34 +72,34 @@ export default {
       cardList: [
         {
           img: card01,
-          titleTop: "BRANDING",
-          titleBottom: "ブランディング",
+          titleTop: "SOLUTION",
+          titleBottom: "ソリューション",
           desc:
-            "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
+            "システムのコンサルティング、導入、運用に渡るすべてのフェーズのサービスを提供し、お客様の利便性、満足度の高いシステムの構築をサポートします。",
           path: "/services"
         },
         {
           img: card02,
-          titleTop: "DEVELOPMENT",
-          titleBottom: "発達",
+          titleTop: "ACHIEVEMENT",
+          titleBottom: "開発実績",
           desc:
-            "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
+            "ビットクロスのソリューションをご活用いただいているお客様のシステム開発実績や、システム構築例についてご紹介します。",
           path: "/services/child2"
         },
         {
           img: card03,
-          titleTop: "MARKETING",
-          titleBottom: "マーケティング",
+          titleTop: "PRODUCT",
+          titleBottom: "自社製品",
           desc:
-            "モバイルネイティブアプリの企画、開発、テスト、保守。クライアントアプリケーション企画、設計・開発、運営及び管理。UE/Unity系アプリケーション設計や開発",
+            "ビットクロスがご提供する自社製品をご紹介します。ラーニングサポートサービスは、ナレッジ習得のための最適な提案をAIにより学習者へ提供するWebサービスです。",
           path: "/services/child3"
         },
         {
           img: card04,
-          titleTop: "OUR WORK",
-          titleBottom: "私たちの仕事",
+          titleTop: "FEATURE",
+          titleBottom: "特長",
           desc:
-            "ロボットトラクタやスマートフォンで操作するビニルハウスの管理システムなどの活用により、農作業を自動化するアプリです。",
+            "フレームワークを利用したシステム開発から大規模システム開発まで、幅広いご要望に対応。豊富な経験といち早い先端技術への取り組みがビットクロスの強みです。",
           path: "/services/child4"
         }
       ],
@@ -168,7 +173,8 @@ export default {
           enTite: "contact"
         }
       ],
-      openMoal: false
+      openMoal: false,
+      bgMp4
     };
   },
 
@@ -178,6 +184,8 @@ export default {
       this.changeBoxSizeHandler();
       window.addEventListener("resize", this.changeBoxSizeHandler);
     }
+    // 初始化coverVid
+    $(".covervid-video").coverVid(640, 360);
   },
   destroyed() {
     window.removeEventListener("resize", this.changeBoxSizeHandler);
@@ -235,24 +243,36 @@ export default {
   .home-content
     // height 270px
     .banner-container
-      width: 100%
-      height 270px
-      // background-color:#504D4B
-      background-position:50% 50%
-      background-repeat:no-repeat
-      position: relative
+      width: 100%;
+      // background-color: #504D4B;
+      // background-image: url(../../img/main_bg.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      position: relative;
+      // top: 70px;
+      // margin-bottom: 70px;
+      z-index: -101;
       .banner-wrapper
-        width: 100%
-        height: 100%
-        margin: 0 auto 0 auto
-        background-repeat: no-repeat
-        background-position: 50% 50%
-        background-size: cover
-        position: relative
-        background-image:url('https://demo.athemes.com/atu-agency/wp-content/uploads/sites/86/2018/06/books-business-computer-459654.jpg')
+        width: 100%;
+        max-width: 1120px;
+        height: 320px;
+        margin: 0 auto 0 auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        position: relative;
+        z-index: -99;
+        .covervid-wrapper
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -100;
+          // .video
      .main-container
       width: 100%
-      background: url(https://bitcross.co.jp/common/img/contents_bg.gif) repeat
+      // background: url(https://bitcross.co.jp/common/img/contents_bg.gif) repeat
       /* padding: 0 25px; */
       overflow: hidden
         // background: url(../img/contents_bg.gif) repeat;
@@ -421,6 +441,8 @@ export default {
         margin-bottom: 0
         float: right
     .home-content
+      // .banner-container
+      //   margin-bottom: 60px;
       .main-container
         .main-container-wrapper
           .news-container
@@ -453,6 +475,9 @@ export default {
 @media screen and (max-width:767px)
   .home
     .home-content
+      .banner-container
+        .banner-wrapper
+          height 220px
       .main-container
         .main-container-wrapper
           padding: 0 15px

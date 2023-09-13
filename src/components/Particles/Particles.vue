@@ -1,12 +1,12 @@
 <template>
   <div class="particles-container">
     <vue-particles
-      color="#dedede"
+      color="#666"
       :particleOpacity="0.7"
       :particlesNumber="70"
       shapeType="circle"
       :particleSize="1"
-      linesColor="#dedede"
+      linesColor="#666"
       :linesWidth="1"
       :lineLinked="true"
       :lineOpacity="0.4"
@@ -15,11 +15,23 @@
       class="particles-content"
     >
     </vue-particles>
-    <div class="title" v-if="$route.meta.enName || $route.meta.parent.enName">
+    <!-- <div class="title" v-if="$route.meta.enName || $route.meta.parent.enName">
       <span class="txt">{{
         $route.meta.enName || $route.meta.parent.enName
       }}</span>
       {{ $route.meta.jaName || $route.meta.parent.jaName }}
+    </div> -->
+    <div class="title">
+      <span class="txt">{{
+        $route.name === "Contact"
+          ? $route.meta.enName
+          : $route.meta.parent.enName
+      }}</span>
+      {{
+        $route.name === "Contact"
+          ? $route.meta.jaName
+          : $route.meta.parent.jaName
+      }}
     </div>
     <BreadNav />
   </div>

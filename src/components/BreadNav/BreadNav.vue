@@ -3,7 +3,8 @@
     <div class="bread-nav-wrapper bx">
       <ul class="nav-container">
         <router-link to="/" class="icon-home">
-          <img :src="iconHome" class="home" alt="" />
+          <!-- <img :src="iconHome" class="home" alt="" /> -->
+          <span class="iconfont icon-homefill home"></span>
         </router-link>
 
         <router-link
@@ -72,8 +73,8 @@ export default {
       padding: 0 60px;
       .icon-home
         .home
-          width: 16px
-          height: 16px
+
+          color: #111
       .item:last-child
         font-weight: 700
       .item

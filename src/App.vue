@@ -103,10 +103,10 @@ export default {
         align-items: center
         justify-content: center
         color: #111
-      :hover,
+      .modal-nav-item:hover,
       .link-active
-        background-color: #DD7B0F
-        background-image: linear-gradient(to right, #DD7B0F 0%, #DE1B10 51%, #DD7B0F 100%)
+        background-color: #111
+        // background-image: linear-gradient(to right, #DD7B0F 0%, #DE1B10 51%, #DD7B0F 100%)
         color: #fff !important
         box-sizing: border-box
         background-size: 200% auto

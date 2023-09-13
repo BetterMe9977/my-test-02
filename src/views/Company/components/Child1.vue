@@ -79,20 +79,27 @@
         </h2>
       </div>
       <div class="section-right">
-        <ul class="client">
-          <li>富士ソフト株式会社</li>
-          <li>日鉄ソリューションズ株式会社</li>
-          <li>株式会社システナ</li>
-          <li>他多数（敬称略・順不同）</li>
-        </ul>
+        <Client
+          :sourceData="[
+            '富士ソフト株式会社',
+            '日鉄ソリューションズ株式会社',
+            '株式会社システナ',
+            '他多数（敬称略・順不同）'
+          ]"
+        />
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import Client from "@/components/Client/Client";
+
 export default {
   name: "MyTest02CompanyChild1",
+  components: {
+    Client
+  },
 
   data() {
     return {};
@@ -129,18 +136,6 @@ export default {
   .section2
     .section-right
       // width 75%
-      .client
-        margin-bottom: 20px;
-        width: 100%;
-        display: flex
-        flex-wrap: wrap
-        li:nth-child(1),
-        li:nth-child(2)
-          border-top: 1px solid #E7E7E2;
-        li
-          width 50%
-          border-bottom: 1px solid #E7E7E2;
-          padding: 0.6em 0;
   .section2,
   .section1
     display: flex
@@ -182,11 +177,11 @@ export default {
       margin-bottom: 30px
       .en
         font-size: 32px
-    .section2
-      .section-right
-        .client
-          li
-            width 100%
+    // .section2
+    //   .section-right
+    //     .client
+    //       li
+    //         width 100%
 
     .section2,
     .section1
