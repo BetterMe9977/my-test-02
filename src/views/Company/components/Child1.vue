@@ -11,68 +11,14 @@
         </h2>
       </div>
       <div class="section-right">
-        <table class="it-list">
-          <tbody>
-            <tr>
-              <th>商号</th>
-              <td>
-                <p>
-                  dreaMTank株式会社（略称：MT）
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>役員</th>
-              <td>
-                <p>
-                  代表取締役社長　李拯東
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>所在地</th>
-              <td>
-                <p>
-                  〒389-0111 長野県北佐久郡軽井沢町大字長倉5933番地5
-                  <br />
-                  TEL. 0267-46-9877
-                  <br />
-                  〒224-0003 神奈川県横浜市中川中央1-35-16
-                  マイキャッスルセンター北202室
-                  <br />
-                  TEL. 045-507-5873
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>設立</th>
-              <td>
-                <p>
-                  2014年5月
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>事業年度</th>
-              <td>
-                <p>
-                  5月～4月末
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>資本金</th>
-              <td>
-                <p>
-                  3500万円
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Client
+          :sourceData="client.items1.sourceData"
+          :type="client.items1.type"
+          :styleCustom="styleCustom"
+        />
       </div>
     </section>
-    <section class="section2">
+    <section class="section1">
       <div class="section-left">
         <h2 class="txt-wrapper">
           <span class="txt">主要取引先</span>
@@ -80,12 +26,23 @@
       </div>
       <div class="section-right">
         <Client
-          :sourceData="[
-            '富士ソフト株式会社',
-            '日鉄ソリューションズ株式会社',
-            '株式会社システナ',
-            '他多数（敬称略・順不同）'
-          ]"
+          :sourceData="client.items2.sourceData"
+          :type="client.items2.type"
+        />
+        <p>他多数（敬称略・順不同）</p>
+      </div>
+    </section>
+    <section class="section1">
+      <div class="section-left">
+        <h2 class="txt-wrapper">
+          <span class="txt">事業内容</span>
+        </h2>
+      </div>
+      <div class="section-right">
+        <Client
+          :sourceData="client.items3.sourceData"
+          :type="client.items3.type"
+          :iconClass="client.items3.iconClass"
         />
       </div>
     </section>
@@ -96,13 +53,82 @@
 import Client from "@/components/Client/Client";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `会社概要 | dreaMTank株式会社`
+  },
   name: "MyTest02CompanyChild1",
   components: {
     Client
   },
 
   data() {
-    return {};
+    return {
+      client: {
+        items1: {
+          sourceData: [
+            {
+              th: "商号",
+              p: ["dreaMTank株式会社（略称：MT）"]
+            },
+            {
+              th: "役員",
+              p: ["代表取締役社長　李拯東"]
+            },
+            {
+              th: "所在地",
+              p: [
+                "〒389-0111 長野県北佐久郡軽井沢町大字長倉5933番地5",
+                "TEL. 0267-46-9877",
+                "〒224-0003 神奈川県横浜市中川中央1-35-16 マイキャッスルセンター北202室",
+                "TEL. 045-507-5873"
+              ]
+            },
+            {
+              th: "設立",
+              p: ["2014年5月"]
+            },
+            {
+              th: "事業年度",
+              p: ["5月～4月末"]
+            }
+          ],
+          type: "Type3",
+          iconClass: "icon-ziyuan"
+        },
+        items2: {
+          sourceData: [
+            "SES事業",
+            "請負開発事業",
+            "オフショア開発事業",
+            "グローバル人材事業"
+          ],
+          type: "Type1"
+          // iconClass: "icon-ziyuan"
+        },
+        items3: {
+          sourceData: [
+            "富士ソフト株式会社",
+            "日鉄ソリューションズ株式会社",
+            "株式会社システナ"
+          ],
+          type: "Type1",
+          iconClass: "icon-ziyuan"
+        }
+      },
+      styleCustom: {
+        // width: "15%"
+        // 这里可以动态设置样式属性和值
+        // textAlign: "center" // 例如，这里设置了文本居中
+        // 可以根据需要添加其他样式属性和值
+      }
+    };
   },
 
   mounted() {},
@@ -124,7 +150,7 @@ export default {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 700;
       font-size: 38px;
-      color: #DF0011;
+      color: #111;
       letter-spacing: 0.06em;
     .ja
       display: inline-block;
@@ -135,11 +161,13 @@ export default {
       border-right: 1px solid #333;
   .section2
     .section-right
-      // width 75%
+      // flex:1
+      width: 75%
   .section2,
   .section1
     display: flex
-    justify-content: space-around
+    // justify-content: space-around
+    justify-content: space-between
     margin-bottom: 60px
     .section-left
       width 17%
@@ -148,29 +176,12 @@ export default {
         text-align: center;
         line-height: 1.6;
         letter-spacing: 0.06em;
-        border-top: 3px solid #DF0011;
+        border-top: 3px solid #111;
         padding-top: 0.8em;
         margin-bottom: 30px;
         font-size: 100%
     .section-right
-      // flex: 1
-      .it-list
-        width: 100%;
-        border-collapse: separate;
-        tr
-          display: flex
-          th
-            width: 15%;
-            vertical-align: top;
-            padding: 5px 0;
-            text-align: left
-          td
-            flex: 1
-            padding: 5px 0;
-            vertical-align: top;
-            p
-              border-left: 1px solid #E3B2B6;
-              padding-left: 50px;
+      width: 75%
 @media screen and (max-width: 1039px)
   .child1
     .title
@@ -220,7 +231,7 @@ export default {
           margin-bottom: 30px;
           .txt
             display: inline-block;
-            background: #DF0011;
+            background: #111;
             color: #FFF;
             padding: 0.4em 2em;
             border-radius: 20px;
@@ -232,37 +243,11 @@ export default {
           line-height: 1.6;
           text-align: center;
           margin-bottom: 25px;
-        .flow-wrapper
-          margin: 0 auto 40px auto;
-          .item-wrapper
-            height 72px
         .t3
           font-size: 113%;
         .btn1
           .btn1-txt
             font-size: 100%
-        .it-list
-          margin-bottom: 30px
-          tbody
-            width 100%
-            tr
-              width 100%
-              flex-wrap: wrap
-              th
-                width 100%
-                background: #ECE8E6;
-                font-weight: bold;
-                padding: 10px 10px;
-                border: 1px solid #ECE8E6;
-                width: 100%;
-              td
-                padding: 10px 10px;
-                border: 1px solid #ECE8E6;
-                width: 100%;
-                p
-                  border-left: none;
-                  padding-left: 0;
-
 
 @media (min-width: 640px)
   .child1

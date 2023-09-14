@@ -12,7 +12,7 @@
             <p class="tel-box">
               お電話でのお問い合わせはこちら
               <span class="tel">
-                <span class="iconfont icon-phone">&#xe622;</span>
+                <span class="iconfont icon-phone"></span>
                 0267-46-9877</span
               >
             </p>
@@ -104,6 +104,16 @@
 <script>
 import Step from "@/components/Step/Step";
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `お問い合わせ | dreaMTank株式会社`
+  },
   name: "MyTest02ContactChild1",
   components: {
     Step

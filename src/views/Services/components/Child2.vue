@@ -24,7 +24,13 @@
           {{ s.right.p1.t2 }}
         </p>
         <p class="logo1">
-          <img :src="s.right.logo1.src" :alt="s.right.logo1.alt" srcset="" />
+          <img
+            :data-src="s.right.logo1.src"
+            loading="lazy"
+            :src="s.right.logo1.src"
+            :alt="s.right.logo1.alt"
+            srcset=""
+          />
         </p>
         <Client
           :sourceData="s.right.client.items3.sourceData"
@@ -54,6 +60,16 @@ import services05 from "@/views/Services/img/services-05.jpg";
 import Client from "@/components/Client/Client";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `開発実績 | dreaMTank株式会社`
+  },
   name: "MyTest02ServicesChild2",
   components: {
     Client
@@ -96,15 +112,15 @@ export default {
                 sourceData: [
                   {
                     th: "プラットフォーム",
-                    p: "AWS（EC2、ECS、Postgres RDS、Redis、S3、Route53）"
+                    p: ["AWS（EC2、ECS、Postgres RDS、Redis、S3、Route53）"]
                   },
                   {
                     th: "開発言語",
-                    p: "Go、Java8、Python"
+                    p: ["Go、Java8、Python"]
                   },
                   {
                     th: "その他",
-                    p: "Spring boot、Apache Kafka、Docker、Jenkins、Terraform"
+                    p: ["Spring boot、Apache Kafka、Docker、Jenkins、Terraform"]
                   }
                 ],
                 type: "Type3",
@@ -144,16 +160,17 @@ export default {
                 sourceData: [
                   {
                     th: "プラットフォーム",
-                    p: "IOT（ThingWorx）"
+                    p: ["IOT（ThingWorx）"]
                   },
                   {
                     th: "開発言語",
-                    p: "Python、Java"
+                    p: ["Python、Java"]
                   },
                   {
                     th: "その他",
-                    p:
+                    p: [
                       "Hadoop、Apache Sspark、Apache Storm、Apache Kafka、MongoDB、Apache Cassandra、NoSQL/KVS"
+                    ]
                   }
                 ],
                 type: "Type3",
@@ -196,15 +213,15 @@ export default {
                 sourceData: [
                   {
                     th: "プラットフォーム",
-                    p: "BizRobo!/BasicRobo（Kofax Kapow）"
+                    p: ["BizRobo!/BasicRobo（Kofax Kapow）"]
                   },
                   {
                     th: "開発言語",
-                    p: "Java、VB、HTML"
+                    p: ["Java、VB、HTML"]
                   },
                   {
                     th: "その他",
-                    p: "OCR、Json、正規表現、MySQL、Management Consoleサーバ"
+                    p: ["OCR、Json、正規表現、MySQL、Management Consoleサーバ"]
                   }
                 ],
                 type: "Type3",
@@ -247,15 +264,15 @@ export default {
                 sourceData: [
                   {
                     th: "プラットフォーム",
-                    p: "Terasoluna、iOS、Android"
+                    p: ["Terasoluna、iOS、Android"]
                   },
                   {
                     th: "開発言語",
-                    p: "Java、HTML、CSS3、jQuery"
+                    p: ["Java、HTML、CSS3、jQuery"]
                   },
                   {
                     th: "その他",
-                    p: "GitHub"
+                    p: ["GitHub"]
                   }
                 ],
                 type: "Type3",
@@ -281,7 +298,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.$route);
+    // console.log(this.$route);
   },
 
   methods: {}

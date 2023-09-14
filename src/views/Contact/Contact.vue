@@ -20,6 +20,16 @@ import Child2 from "./components/Child2.vue";
 import Child3 from "./components/Child3.vue";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `お問い合わせ | dreaMTank株式会社`
+  },
   name: "MyTest02Contact",
   components: {
     Particles,
@@ -36,7 +46,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.$route);
+    // console.log(this.$route);
   },
 
   methods: {

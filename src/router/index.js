@@ -5,6 +5,7 @@ import Services from "@/views/Services/Services";
 import Company from "@/views/Company/Company";
 import Recruit from "@/views/Recruit/Recruit";
 import Contact from "@/views/Contact/Contact";
+import NewsList from "@/views/NewsList/NewsList";
 Vue.use(Router);
 
 export default new Router({
@@ -18,7 +19,7 @@ export default new Router({
     // Services
     {
       path: "/services",
-      name: "Services",
+      // name: "Services",
       meta: {
         jaName: "事業内容",
         enName: "SERVERICES"
@@ -162,7 +163,7 @@ export default new Router({
     // Company
     {
       path: "/company",
-      name: "Company",
+      // name: "Company",
       meta: {
         jaName: "企業情報",
         enName: "COMPANY"
@@ -306,7 +307,7 @@ export default new Router({
     // Recruit
     {
       path: "/recruit",
-      name: "Recruit",
+      // name: "Recruit",
       meta: {
         jaName: "採用情報",
         enName: "RECRUIT"
@@ -376,6 +377,42 @@ export default new Router({
         enName: "CONTACT"
       },
       component: Contact
+    },
+    // News
+    {
+      path: "/news",
+      // name: "News",
+      component: NewsList,
+      meta: {
+        jaName: "ニュース",
+        enName: "NEWS"
+      },
+      children: [
+        {
+          path: "lists",
+          name: "Lists",
+          component: () => import("@/views/NewsList/components/List"),
+          meta: {
+            jaName: "ニュース",
+            enName: "NEWS"
+          },
+          props: true
+        },
+        {
+          path: "listitem/:id",
+          name: "ListsItem",
+          component: () => import("@/views/NewsList/components/ListItem"),
+          meta: {
+            jaName: "ニュース",
+            enName: "NEWS"
+          },
+          props: true
+        },
+        {
+          path: "",
+          redirect: "lists"
+        }
+      ]
     },
     {
       path: "/",

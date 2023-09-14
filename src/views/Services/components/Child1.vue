@@ -110,7 +110,7 @@
         </table>
         <ul class="img-wrapper">
           <li v-for="logo in logoList" :key="logo">
-            <img :src="logo" alt="" />
+            <img :data-src="logo" loading="lazy" :src="logo" alt="" />
           </li>
         </ul>
         <h4 class="btn1">
@@ -224,6 +224,17 @@ import logo6 from "@/views/Services/img/logo6.gif";
 import Client from "@/components/Client/Client";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `ソリューション | dreaMTank株式会社`
+  },
+
   name: "MyTest02ServicesChild1",
   components: {
     Client
@@ -237,7 +248,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.$route);
+    // console.log(this.$route);
   },
 
   methods: {}

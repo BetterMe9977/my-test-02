@@ -26,7 +26,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.childs);
+    // console.log(this.childs);
   },
 
   methods: {}

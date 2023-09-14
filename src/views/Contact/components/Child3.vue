@@ -23,6 +23,16 @@
 <script>
 import Step from "@/components/Step/Step";
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `お問い合わせ | dreaMTank株式会社`
+  },
   name: "MyTest0ContactChild3",
   props: {
     formData: {

@@ -1,5 +1,5 @@
 <template>
-  <component :sourceData="sourceData" :is="type">
+  <component :sourceData="sourceData" :styleCustom="styleCustom" :is="type">
     <template v-if="iconClass" #icon>
       <span class="iconfont" :class="iconClass"></span>
     </template>
@@ -32,6 +32,10 @@ export default {
     iconClass: {
       type: String,
       default: ""
+    },
+    styleCustom: {
+      type: Object,
+      default: () => {}
     }
   },
 

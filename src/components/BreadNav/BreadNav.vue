@@ -9,7 +9,9 @@
 
         <router-link
           :to="
-            $route.name === 'Contact' ? $route.path : $route.meta.parent.path
+            passRouteList.includes($route.name)
+              ? $route.path
+              : $route.meta.parent.path
           "
           class="item"
         >
@@ -17,13 +19,13 @@
             &#xe62b;</span
           >
           {{
-            $route.name === "Contact"
+            passRouteList.includes($route.name)
               ? $route.meta.jaName
               : $route.meta.parent.jaName
           }}
         </router-link>
         <router-link
-          v-if="!($route.name === 'Contact')"
+          v-if="!passRouteList.includes($route.name)"
           :to="$route.path"
           class="item"
         >
@@ -41,7 +43,12 @@
 import iconHome from "@/assets/img/icon-home.png";
 export default {
   name: "MyTest02BreadNav",
-  props: {},
+  props: {
+    passRouteList: {
+      type: Array,
+      default: () => []
+    }
+  },
 
   data() {
     return {

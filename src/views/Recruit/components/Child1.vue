@@ -11,34 +11,12 @@
         </h2>
       </div>
       <div class="section-right">
-        <table class="it-list">
-          <tbody>
-            <tr>
-              <th>募集職種</th>
-              <td>
-                <p>
-                  スマホネイティブアプリエンジニア
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>資格</th>
-              <td>
-                <p>
-                  スマホアプリエンジニアとしての経験が2年程度ある方
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>スキル</th>
-              <td>
-                <p>
-                  iOS-Swift、Android-Java、Android-Kotlin
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Client
+          :sourceData="client.items1.sourceData"
+          :type="client.items1.type"
+          :styleCustom="client.items1.styleCustom"
+        />
+        <p>その他募集職種：営業職、PMO補佐／ヘルプデスクなど</p>
       </div>
     </section>
     <section class="section1">
@@ -48,42 +26,15 @@
         </h2>
       </div>
       <div class="section-right">
-        <table class="it-list">
-          <tbody>
-            <tr>
-              <th>募集職種</th>
-              <td>
-                <p>
-                  システムエンジニア
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>資格</th>
-              <td>
-                <p>
-                  設計や開発経験が3年以上ある方
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>スキル</th>
-              <td>
-                <p>
-                  Java、C#、PHP、VueJS、ReactJS、NodeJS、HTML5、Javascript、Typescript、CSS、Ruby、Python、Go、C++、Unity
-                  <br />
-                  OS：Windows、Mac OS、Linux、Ubuntu
-                  <br />
-                  DB：MySQL、Oracle、NoSQL、postgresql、SQLServer、DB2
-                  <br />
-                  クラウド：AWS、GCP、Azure
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Client
+          :sourceData="client.items2.sourceData"
+          :type="client.items2.type"
+          :styleCustom="client.items2.styleCustom"
+        />
+        <p>その他募集職種：営業職、PMO補佐／ヘルプデスクなど</p>
       </div>
     </section>
+
     <section class="section2">
       <div class="section-left">
         <h2 class="txt-wrapper">
@@ -142,12 +93,83 @@
 
 <script>
 import iconDownArrow from "@/assets/img/icon-down-arrow.png";
+import Client from "@/components/Client/Client";
+
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `中途採用情報 | dreaMTank株式会社`
+  },
   name: "MyTest02RecruitChild1",
+  components: {
+    Client
+  },
 
   data() {
     return {
-      iconDownArrow
+      iconDownArrow,
+      client: {
+        items1: {
+          sourceData: [
+            {
+              th: "募集職種",
+              p: ["スマホネイティブアプリエンジニア"]
+            },
+            {
+              th: "資格",
+              p: ["スマホアプリエンジニアとしての経験が2年程度ある方"]
+            },
+            {
+              th: "スキル",
+              p: ["iOS-Swift、Android-Java、Android-Kotlin"]
+            }
+          ],
+          type: "Type3",
+          // iconClass: "icon-ziyuan",
+          styleCustom: {
+            width: "15%"
+            // 这里可以动态设置样式属性和值
+            // textAlign: "center" // 例如，这里设置了文本居中
+            // 可以根据需要添加其他样式属性和值
+          }
+        },
+        items2: {
+          sourceData: [
+            {
+              th: "募集職種",
+              p: ["システムエンジニア"]
+            },
+            {
+              th: "資格",
+              p: ["設計や開発経験が3年以上ある方"]
+            },
+            {
+              th: "スキル",
+              p: [
+                "Java、C#、PHP、VueJS、ReactJS、NodeJS、HTML5、Javascript、Typescript、",
+                "CSS、Ruby、Python、Go、C++、Unity",
+                "OS：Windows、Mac OS、Linux、Ubuntu",
+                "DB：MySQL、Oracle、NoSQL、postgresql、SQLServer、DB2",
+                "クラウド：AWS、GCP、Azure"
+              ]
+            }
+          ],
+          type: "Type3",
+          // iconClass: "icon-ziyuan",
+          styleCustom: {
+            width: "15%"
+            // 这里可以动态设置样式属性和值
+            // textAlign: "center" // 例如，这里设置了文本居中
+            // 可以根据需要添加其他样式属性和值
+          }
+        }
+      }
     };
   },
 
@@ -170,7 +192,7 @@ export default {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 700;
       font-size: 38px;
-      color: #DF0011;
+      color: #111;
       letter-spacing: 0.06em;
     .ja
       display: inline-block;
@@ -221,7 +243,7 @@ export default {
         text-align: center;
         line-height: 1.6;
         letter-spacing: 0.06em;
-        border-top: 3px solid #DF0011;
+        border-top: 3px solid #111;
         padding-top: 0.8em;
         margin-bottom: 30px;
         font-size: 100%

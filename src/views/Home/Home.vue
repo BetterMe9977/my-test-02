@@ -15,7 +15,13 @@
         <div class="main-container-wrapper bx">
           <div class="cards-container">
             <div class="card-items" v-for="card in cardList" :key="card.img">
-              <img :src="card.img" alt="" class="card-items-img" />
+              <img
+                loading="lazy"
+                :data-src="card.img"
+                :src="card.img"
+                alt=""
+                class="card-items-img"
+              />
               <div class="card-txt-wrapper">
                 <div class="card-txt-content">
                   <p class="card-title-wrapper">
@@ -37,17 +43,17 @@
           <div class="news-container">
             <div class="title-wrapper">
               <h2 class="txt">NEWS</h2>
-              <router-link to="" class="btn">NEWS INDEX</router-link>
+              <router-link to="/news" class="btn">NEWS INDEX</router-link>
             </div>
             <div class="news-lists-wrapper">
               <router-link
                 v-for="date in newList"
                 :key="date.id"
-                :to="'news/' + date.id"
+                :to="'news/listitem/' + date.id"
                 class="list-item"
                 :class="date.id === 1 && 'border-top'"
               >
-                <span class="date">{{ formattedDate }}</span>
+                <span class="date">{{ date.date }}</span>
                 <span class="title">{{ date.title }}</span>
               </router-link>
             </div>
@@ -64,9 +70,20 @@ import card02 from "@/assets/img/card-02.jpeg";
 import card03 from "@/assets/img/card-03.jpeg";
 import card04 from "@/assets/img/card-04.jpeg";
 import bgMp4 from "@/assets/video/bg-mp4.mp4";
+import newList from "@/assets/mock/news.json";
 
 export default {
   name: "MyTest02Home",
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: "dreaMTank株式会社 | スマート農業とARアプリ"
+  },
   data() {
     return {
       cardList: [
@@ -104,75 +121,7 @@ export default {
         }
       ],
       date: new Date(),
-      newList: [
-        {
-          id: 1,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 2,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 3,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 4,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 5,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 6,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 7,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        },
-        {
-          id: 8,
-          date: "",
-          title: "我本来是新闻的标题，但是没有数据就先空着。"
-        }
-      ],
-      navList: [
-        {
-          path: "/home",
-          title: "ホーム",
-          enTite: "Home"
-        },
-        {
-          path: "/services",
-          title: "事業内容",
-          enTite: "Services"
-        },
-        {
-          path: "/company",
-          title: "企業情報",
-          enTite: "Company"
-        },
-        {
-          path: "/recruit",
-          title: "採用情報",
-          enTite: "Recruit"
-        },
-        {
-          path: "/contact",
-          title: "お問い合わせ",
-          enTite: "contact"
-        }
-      ],
+      newList: newList.slice(0, 8),
       openMoal: false,
       bgMp4
     };
@@ -224,15 +173,6 @@ export default {
           }
         });
       }
-    }
-  },
-  computed: {
-    formattedDate() {
-      const date = new Date();
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, "0"); // 获取月份时要加1，且格式化为两位数
-      const day = String(date.getDate()).padStart(2, "0"); // 获取日期并格式化为两位数
-      return `${year}.${month}.${day}`;
     }
   }
 };
@@ -312,7 +252,7 @@ export default {
                       display: block
                       font-family: 'Roboto Condensed', sans-serif
                       font-size: 24px
-                      color: #DF0011
+                      color: #111
                       letter-spacing: 0.06em
                       margin-bottom: 10px
                     .title-bottom
@@ -381,7 +321,7 @@ export default {
                 width:20px
                 left:0
                 top:20px
-                border: .7px solid #DF0011
+                border: .7px solid #111
                 background-size:20px 1px
               .btn
                 display:inline-block

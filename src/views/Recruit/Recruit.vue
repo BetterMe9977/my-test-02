@@ -21,6 +21,16 @@ import Particles from "@/components/Particles/Particles";
 import RouteNav from "@/components/RouteNav/RouteNav";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `中途採用情報 | dreaMTank株式会社`
+  },
   name: "MyTest02Recruit",
   components: {
     Particles,

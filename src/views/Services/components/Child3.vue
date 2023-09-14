@@ -18,7 +18,7 @@
         </p>
         <ul class="img-wrapper">
           <li v-for="p in productList" :key="p.src">
-            <img :src="p.src" :alt="p.alt" />
+            <img :data-src="p.src" loading="lazy" :src="p.src" :alt="p.alt" />
             <p>
               {{ p.p.t1 }}
               <br />
@@ -53,6 +53,16 @@ import product06 from "@/views/Services/img/product-06.jpg";
 import Client from "@/components/Client/Client";
 
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `自社製品 | dreaMTank株式会社`
+  },
   name: "MyTest02ServicesChild3",
   components: {
     Client
@@ -139,26 +149,26 @@ export default {
       clientType3SourceData: [
         {
           th: "言語",
-          p: "Python、Go、Java"
+          p: ["Python、Go、Java"]
         },
         {
           th: "サーバ",
-          p: "CentOS、Ubantu、Windowss、AWS、SB Cloud"
+          p: ["CentOS、Ubantu、Windowss、AWS、SB Cloud"]
         },
         {
           th: "運用方式",
-          p: "1. OSS公開\t2. 一般企業へのカスタマイズ（有料）"
+          p: ["1. OSS公開", "2. 一般企業へのカスタマイズ（有料）"]
         },
         {
           th: "サポート端末",
-          p: "iOS/Android、Apple Watch/Android Wear、Web、HoloLensなど"
+          p: ["iOS/Android、Apple Watch/Android Wear、Web、HoloLensなど"]
         }
       ]
     };
   },
 
   mounted() {
-    console.log(this.$route);
+    // console.log(this.$route);
   },
 
   methods: {}
@@ -309,9 +319,10 @@ export default {
           width: 30%;
           margin: 0 1.66%;
           background: #F0F0F0;
-          padding: 20px 0;
+          // padding: 20px 0;
           border-radius: 4px;
           margin-bottom: 20px;
+          padding-bottom: 20px
           img
             display: block;
             width: 100%;

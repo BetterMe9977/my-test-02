@@ -2,9 +2,9 @@
   <table class="type3">
     <tbody>
       <tr v-for="(data, index) in sourceData" :key="index">
-        <th>{{ data.th }}</th>
+        <th :style="styleCustom">{{ data.th }}</th>
         <td>
-          <p>{{ data.p }}</p>
+          <p v-for="p in data.p" :key="p">{{ p }}</p>
         </td>
       </tr>
     </tbody>
@@ -18,6 +18,10 @@ export default {
     sourceData: {
       type: Array,
       default: () => []
+    },
+    styleCustom: {
+      type: Object,
+      default: () => {}
     }
   },
 
@@ -25,7 +29,9 @@ export default {
     return {};
   },
 
-  mounted() {},
+  mounted() {
+    // console.log(this.styleCustom);
+  },
 
   methods: {}
 };
@@ -39,7 +45,7 @@ export default {
   tr
     display: flex
     th
-      width: 25%;
+      width: 25%
       vertical-align: top;
       padding: 5px 0;
       text-align: left
@@ -59,7 +65,7 @@ export default {
         width 100%
         flex-wrap: wrap
         th
-          width 100%
+          width 100% !important
           background: #ECE8E6;
           font-weight: bold;
           padding: 10px 10px;

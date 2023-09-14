@@ -31,6 +31,16 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: "dreaMTank株式会社 | スマート農業とARアプリ"
+  },
   name: "App",
   components: {
     Header,

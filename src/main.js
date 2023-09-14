@@ -3,6 +3,7 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
+import VueMeta from "vue-meta";
 import VueParticles from "vue-particles";
 import "./assets/utils/VueHooks/index.js";
 import "./assets/utils/JQuery/jquery-3.4.1.min";
@@ -15,6 +16,7 @@ import "./assets/css/validationEngine.jquery.styl";
 import "./assets/css/iconfont.styl";
 Vue.config.productionTip = false;
 Vue.use(VueParticles);
+Vue.use(VueMeta);
 new Vue({
   el: "#app",
   router,

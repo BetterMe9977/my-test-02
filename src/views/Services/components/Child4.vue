@@ -31,17 +31,21 @@
 
 <script>
 import services01 from "@/views/Services/img/services-01.jpg";
-import logo1 from "@/views/Services/img/logo1.jpeg";
-import logo2 from "@/views/Services/img/logo2.gif";
-import logo3 from "@/views/Services/img/logo3.gif";
-import logo4 from "@/views/Services/img/logo4.gif";
-import logo5 from "@/views/Services/img/logo5.gif";
-import logo6 from "@/views/Services/img/logo6.gif";
 
 import Client from "@/components/Client/Client";
 
 export default {
   name: "MyTest02ServicesChild4",
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `特長 | dreaMTank株式会社`
+  },
   components: {
     Client
   },
@@ -49,7 +53,6 @@ export default {
   data() {
     return {
       services01,
-      logoList: [logo1, logo2, logo3, logo4, logo5, logo6],
       sectionList: [
         {
           id: 1,
@@ -164,7 +167,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.$route);
+    // console.log(this.$route);
   },
 
   methods: {}

@@ -57,6 +57,16 @@
 
 <script>
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `アクセス | dreaMTank株式会社`
+  },
   name: "MyTest02CompanyChild4",
 
   data() {
@@ -82,7 +92,7 @@ export default {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 700;
       font-size: 38px;
-      color: #DF0011;
+      color: #111;
       letter-spacing: 0.06em;
     .ja
       display: inline-block;
@@ -102,7 +112,7 @@ export default {
         text-align: center;
         line-height: 1.6;
         letter-spacing: 0.06em;
-        border-top: 3px solid #DF0011;
+        border-top: 3px solid #111;
         padding-top: 0.8em;
         margin-bottom: 30px;
         font-size: 100%
@@ -168,7 +178,7 @@ export default {
           margin-bottom: 30px;
           .txt
             display: inline-block;
-            background: #DF0011;
+            background: #111;
             color: #FFF;
             padding: 0.4em 2em;
             border-radius: 20px;

@@ -7,95 +7,36 @@
     <section class="section1">
       <div class="section-left">
         <h2 class="txt-wrapper">
-          <span class="txt">会社概要</span>
+          <span class="txt">組織図</span>
         </h2>
       </div>
       <div class="section-right">
-        <table class="it-list">
-          <tbody>
-            <tr>
-              <th>商号</th>
-              <td>
-                <p>
-                  dreaMTank株式会社（略称：MT）
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>役員</th>
-              <td>
-                <p>
-                  代表取締役社長　李拯東
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>所在地</th>
-              <td>
-                <p>
-                  〒389-0111 長野県北佐久郡軽井沢町大字長倉5933番地5
-                  <br />
-                  TEL. 0267-46-9877
-                  <br />
-                  〒224-0003 神奈川県横浜市中川中央1-35-16
-                  マイキャッスルセンター北202室
-                  <br />
-                  TEL. 045-507-5873
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>設立</th>
-              <td>
-                <p>
-                  2014年5月
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>事業年度</th>
-              <td>
-                <p>
-                  5月～4月末
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <th>資本金</th>
-              <td>
-                <p>
-                  3500万円
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section class="section2">
-      <div class="section-left">
-        <h2 class="txt-wrapper">
-          <span class="txt">主要取引先</span>
-        </h2>
-      </div>
-      <div class="section-right">
-        <ul class="client">
-          <li>富士ソフト株式会社</li>
-          <li>日鉄ソリューションズ株式会社</li>
-          <li>株式会社システナ</li>
-          <li>他多数（敬称略・順不同）</li>
-        </ul>
+        <img :src="companyOrg" :data-src="companyOrg" loading="lazy" alt="" />
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import companyOrg from "../img/company-org.gif";
+
 export default {
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content:
+          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+      }
+    ],
+    title: `組織図 | dreaMTank株式会社`
+  },
   name: "MyTest02CompanyChild3",
 
   data() {
-    return {};
+    return {
+      companyOrg
+    };
   },
 
   mounted() {},
@@ -117,7 +58,7 @@ export default {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 700;
       font-size: 38px;
-      color: #DF0011;
+      color: #111;
       letter-spacing: 0.06em;
     .ja
       display: inline-block;
@@ -129,18 +70,6 @@ export default {
   .section2
     .section-right
       // width 75%
-      .client
-        margin-bottom: 20px;
-        width: 100%;
-        display: flex
-        flex-wrap: wrap
-        li:nth-child(1),
-        li:nth-child(2)
-          border-top: 1px solid #E7E7E2;
-        li
-          width 50%
-          border-bottom: 1px solid #E7E7E2;
-          padding: 0.6em 0;
   .section2,
   .section1
     display: flex
@@ -153,40 +82,24 @@ export default {
         text-align: center;
         line-height: 1.6;
         letter-spacing: 0.06em;
-        border-top: 3px solid #DF0011;
+        border-top: 3px solid #111;
         padding-top: 0.8em;
         margin-bottom: 30px;
         font-size: 100%
     .section-right
-      // flex: 1
-      .it-list
-        width: 100%;
-        border-collapse: separate;
-        tr
-          display: flex
-          th
-            width: 15%;
-            vertical-align: top;
-            padding: 5px 0;
-            text-align: left
-          td
-            flex: 1
-            padding: 5px 0;
-            vertical-align: top;
-            p
-              border-left: 1px solid #E3B2B6;
-              padding-left: 50px;
+      width 75%
+      img
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
 @media screen and (max-width: 1039px)
   .child3
     .title
       margin-bottom: 30px
       .en
         font-size: 32px
-    .section2
-      .section-right
-        .client
-          li
-            width 100%
+    // .section2
+    //   .section-right
 
     .section2,
     .section1
@@ -195,11 +108,8 @@ export default {
         width: 20%;
         .txt-wrapper
           font-size: 100%
-      .section-right
-        width: 72%;
-
-
-
+      // .section-right
+      //   width: 72%;
 
 
 
@@ -210,9 +120,6 @@ export default {
         font-size: 26px
       .ja
         padding: 0 15px;
-    .info-img
-      height: 320px;
-      width: 100%;
     .section2,
     .section1
       flex-wrap: wrap
@@ -225,7 +132,7 @@ export default {
           margin-bottom: 30px;
           .txt
             display: inline-block;
-            background: #DF0011;
+            background: #111;
             color: #FFF;
             padding: 0.4em 2em;
             border-radius: 20px;
@@ -237,49 +144,4 @@ export default {
           line-height: 1.6;
           text-align: center;
           margin-bottom: 25px;
-        .flow-wrapper
-          margin: 0 auto 40px auto;
-          .item-wrapper
-            height 72px
-        .t3
-          font-size: 113%;
-        .btn1
-          .btn1-txt
-            font-size: 100%
-        .it-list
-          margin-bottom: 30px
-          tbody
-            width 100%
-            tr
-              width 100%
-              flex-wrap: wrap
-              th
-                width 100%
-                background: #ECE8E6;
-                font-weight: bold;
-                padding: 10px 10px;
-                border: 1px solid #ECE8E6;
-                width: 100%;
-              td
-                padding: 10px 10px;
-                border: 1px solid #ECE8E6;
-                width: 100%;
-                p
-                  border-left: none;
-                  padding-left: 0;
-
-
-@media (min-width: 640px)
-  .child3
-    max-width: 640px;
-@media (min-width: 768px)
-  .child3
-    max-width: 768px;
-@media (min-width: 1024px)
-  .child3
-    max-width: 1024px;
-
-@media (min-width: 1280px)
-  .child3
-    max-width: 1280px
 </style>

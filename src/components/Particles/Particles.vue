@@ -23,17 +23,17 @@
     </div> -->
     <div class="title">
       <span class="txt">{{
-        $route.name === "Contact"
+        passRouteList.includes($route.name)
           ? $route.meta.enName
           : $route.meta.parent.enName
       }}</span>
       {{
-        $route.name === "Contact"
+        passRouteList.includes($route.name)
           ? $route.meta.jaName
           : $route.meta.parent.jaName
       }}
     </div>
-    <BreadNav />
+    <BreadNav :passRouteList="passRouteList" />
   </div>
 </template>
 
@@ -46,7 +46,9 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      passRouteList: ["Contact", "News", "ListsItem", "Lists"]
+    };
   },
 
   mounted() {},

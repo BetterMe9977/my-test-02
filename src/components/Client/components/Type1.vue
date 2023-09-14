@@ -1,5 +1,5 @@
 <template>
-  <ul class="client">
+  <ul class="type1">
     <li v-for="(data, index) in sourceData" :key="index">
       <slot name="icon"></slot>
       {{ data }}
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "MyTestClientType1",
+  name: "MyTesttype1Type1",
   props: {
     sourceData: {
       type: Array,
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.client
+.type1
   margin-bottom: 20px;
   width: 100%;
   display: flex
@@ -42,7 +42,7 @@ export default {
     padding: 0.6em 0
 
 @media screen and (max-width: 1039px)
-  .client
+  .type1
     li
       width 100%
     li:nth-child(2)
