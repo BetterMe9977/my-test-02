@@ -113,4 +113,5 @@ export default {
           margin-top: 4px;
           .right-arrow
             padding: 0 4px
+            font-size: 12px !important
 </style>

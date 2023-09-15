@@ -97,7 +97,7 @@ export default {
     .step2:after
       left: 63%;
       border: solid 20px transparent;
-      border-left-color: #DF0011;
+      border-left-color: #F0DFE0;
     .active:after
       border-left-color: #DF0011;
 </style>

@@ -85,6 +85,11 @@ export default {
             .title
               width 80%
 @media screen and (max-width:767px)
-  .list-item
-    flex-direction: column !important
+  .list
+    padding: 0 15px;
+    .list-container
+      .list-box
+        padding: 20px 20px 60px 20px;
+        .list-item
+          flex-direction: column !important
 </style>

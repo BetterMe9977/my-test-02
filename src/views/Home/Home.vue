@@ -4,7 +4,13 @@
       <section class="banner-container">
         <div class="banner-wrapper bx">
           <div class="covervid-wrapper">
-            <video class="covervid-video" autoplay loop muted>
+            <video
+              class="covervid-video"
+              autoplay
+              :poster="bgMp4Jpg"
+              loop
+              muted
+            >
               <source :src="bgMp4" type="video/mp4" />
             </video>
           </div>
@@ -70,6 +76,8 @@ import card02 from "@/assets/img/card-02.jpeg";
 import card03 from "@/assets/img/card-03.jpeg";
 import card04 from "@/assets/img/card-04.jpeg";
 import bgMp4 from "@/assets/video/bg-mp4.mp4";
+import bgMp4Jpg from "@/assets/img/bg-mp4.jpg";
+
 import newList from "@/assets/mock/news.json";
 
 export default {
@@ -123,7 +131,8 @@ export default {
       date: new Date(),
       newList: newList.slice(0, 8),
       openMoal: false,
-      bgMp4
+      bgMp4,
+      bgMp4Jpg
     };
   },
 

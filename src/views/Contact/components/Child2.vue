@@ -108,18 +108,22 @@ export default {
       });
     },
     finishtHandler() {
-      // console.log(this.formData);
-      // fetch("https://www.oppenheim.co.jp/api/send-email", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json" // 设置请求头为JSON格式
-      //   },
-      //   body: JSON.stringify(this.formData)
-      // })
-      //   .then(res => res.json)
-      //   .then(res => {
-      //     console.log(res);
-      //   });
+      console.log(this.formData);
+      fetch("https://www.oppenheim.co.jp/api/email/send-email", {
+        // fetch("http://localhost:3444/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json" // 设置请求头为JSON格式
+        },
+        body: JSON.stringify(this.formData)
+      })
+        .then(res => res.json())
+        .then(res => {
+          // 送信成功
+          if (res.data.code === 200) {
+            // 原网站没有送信后是否成功的交互，暂时留个缺口
+          }
+        });
       this.$emit("currentIndexHandler", {
         Child2: "Child3",
         formData: this.formData
