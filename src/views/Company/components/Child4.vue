@@ -46,7 +46,21 @@
           class="map"
           height="400px"
           width="100%"
-          src="https://maps.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E4%B8%AD%E5%B7%9D%E4%B8%AD%E5%A4%AE1-35-16%E3%80%80%E3%83%9E%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B9%E3%83%AB%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E5%8C%97202%E5%AE%A4&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6425.395152456146!2d138.55440075561017!3d36.368103591937036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dd1e1ee2be0ef%3A0x16d8ddc9db507d82!2z44CSMzg5LTAxMTEg6ZW36YeO55yM5YyX5L2Q5LmF6YOh6Lu95LqV5rKi55S66ZW35YCJ5Y2D44Kx5rud6KW_5Yy677yV77yZ77yT77yT4oiS77yV!5e0!3m2!1sja!2sjp!4v1694777198703!5m2!1sja!2sjp"
+          title="長野県北佐久郡軽井沢町大字長倉5933番地5"
+          aria-label="長野県北佐久郡軽井沢町大字長倉5933番地5"
+          loading="lazy"
+        ></iframe>
+        <iframe
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          class="map"
+          loading="lazy"
+          height="400px"
+          width="100%"
+          src="https://maps.google.com/maps?q=〒224-0003 神奈川県横浜市中川中央1-35-16 マイキャッスルセンター北202室&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near&region=JP"
           title="神奈川県横浜市都筑区中川中央1-35-16　マイキャッスルセンター北202室"
           aria-label="神奈川県横浜市都筑区中川中央1-35-16　マイキャッスルセンター北202室"
         ></iframe>

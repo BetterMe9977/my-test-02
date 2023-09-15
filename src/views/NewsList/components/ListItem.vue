@@ -19,7 +19,7 @@
           </ul>
           <div class="article-warpper">
             <p class="date">{{ listItem.date }}</p>
-            <h2 class="title">{{ listItem.title }}！</h2>
+            <h2 class="title">{{ listItem.title }}</h2>
           </div>
           <div class="content">
             <p v-for="(t, index) in listItem.content" :key="index">{{ t }}</p>

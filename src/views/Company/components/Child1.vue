@@ -30,6 +30,7 @@
           :type="client.items3.type"
           :iconClass="client.items3.iconClass"
         />
+        <p>他多数（敬称略・順不同）</p>
       </div>
     </section>
     <section class="section1">
@@ -43,7 +44,6 @@
           :sourceData="client.items2.sourceData"
           :type="client.items2.type"
         />
-        <p>他多数（敬称略・順不同）</p>
       </div>
     </section>
   </div>
@@ -97,6 +97,10 @@ export default {
             {
               th: "事業年度",
               p: ["5月～4月末"]
+            },
+            {
+              th: "资本金",
+              p: ["500万円"]
             }
           ],
           type: "Type3",

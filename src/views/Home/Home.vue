@@ -244,6 +244,7 @@ export default {
                 margin: 0 10px
                 .card-txt-content
                   width:auto
+                  line-height: 1.6
                   background:#FFF
                   padding:25px 20px
                   box-shadow:0px 0px 5px rgba(0,0,0,0.2)
@@ -273,7 +274,7 @@ export default {
                     word-wrap: break-word
                     color: rgb(17, 17, 17)
                     line-height: 25px
-                    padding-top: 10px
+                    // padding-top: 10px
                   .more
                     display:block
                     width:156px
