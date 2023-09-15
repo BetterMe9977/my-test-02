@@ -26,10 +26,10 @@
       </div>
       <div class="section-right">
         <Client
-          :sourceData="client.items2.sourceData"
-          :type="client.items2.type"
+          :sourceData="client.items3.sourceData"
+          :type="client.items3.type"
+          :iconClass="client.items3.iconClass"
         />
-        <p>他多数（敬称略・順不同）</p>
       </div>
     </section>
     <section class="section1">
@@ -40,10 +40,10 @@
       </div>
       <div class="section-right">
         <Client
-          :sourceData="client.items3.sourceData"
-          :type="client.items3.type"
-          :iconClass="client.items3.iconClass"
+          :sourceData="client.items2.sourceData"
+          :type="client.items2.type"
         />
+        <p>他多数（敬称略・順不同）</p>
       </div>
     </section>
   </div>
