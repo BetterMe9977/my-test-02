@@ -58,16 +58,16 @@ export default {
           id: 1,
           left: { index: "01", txt: "FEATURE" },
           right: {
-            title: "FLUTTER開発に経験と実績多数",
+            title: "Flutter開発に経験と実績多数",
             p1:
-              "FLUTTER（テラソルナ）は、NTTデータが提供するシステム開発のトータルソリューションです。",
+              "Flutter（フラッター）は、Googleによって開発されたフリーかつオープンソースのUIのSDKである。",
             btn1Txt: "POINT",
             client: {
               items2: {
                 sourceData: [
                   "認定アーキクトと認定プログラマが多数所属",
                   "豊富な参画経験と実績",
-                  "システム構築・開発・運用保守のワンストップ対応"
+                  "システムとアプリ構築・開発・運用保守のワンストップ対応"
                 ],
                 type: "Type2",
                 iconClass: "icon-gou"
