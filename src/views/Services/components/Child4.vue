@@ -60,7 +60,7 @@ export default {
           right: {
             title: "Flutter開発に経験と実績多数",
             p1:
-              "Flutter（フラッター）は、Googleによって開発されたフリーかつオープンソースのUIのSDKである。",
+              "Flutter（フラッター）は、Googleによって開発されたフリーかつオープンソースのUIのSDKである。単一のコードベースから、Android、iOS、Linux、macOS、Windows、Google Fuchsia向けのクロスプラットフォームアプリケーションを開発するために利用される。",
             btn1Txt: "POINT",
             client: {
               items2: {
