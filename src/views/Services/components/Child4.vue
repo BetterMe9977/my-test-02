@@ -58,9 +58,9 @@ export default {
           id: 1,
           left: { index: "01", txt: "FEATURE" },
           right: {
-            title: "TERASOLUNA開発に経験と実績多数",
+            title: "FLUTTER開発に経験と実績多数",
             p1:
-              "TERASOLUNA（テラソルナ）は、NTTデータが提供するシステム開発のトータルソリューションです。",
+              "FLUTTER（テラソルナ）は、NTTデータが提供するシステム開発のトータルソリューションです。",
             btn1Txt: "POINT",
             client: {
               items2: {
