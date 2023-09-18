@@ -22,7 +22,7 @@ export default new Router({
       // name: "Services",
       meta: {
         jaName: "事業内容",
-        enName: "SERVERICES"
+        enName: "SERVICES"
       },
       component: Services,
       children: [
@@ -33,7 +33,7 @@ export default new Router({
           meta: {
             parent: {
               jaName: "事業内容",
-              enName: "SERVERICES",
+              enName: "SERVICES",
               path: "/services"
             },
             jaName: "ソリューション",
@@ -65,7 +65,7 @@ export default new Router({
           meta: {
             parent: {
               jaName: "事業内容",
-              enName: "SERVERICES",
+              enName: "SERVICES",
               path: "/services"
             },
             jaName: "開発実績",
@@ -97,7 +97,7 @@ export default new Router({
           meta: {
             parent: {
               jaName: "事業内容",
-              enName: "SERVERICES",
+              enName: "SERVICES",
               path: "/services"
             },
             jaName: "自社製品",
@@ -129,7 +129,7 @@ export default new Router({
           meta: {
             parent: {
               jaName: "事業内容",
-              enName: "SERVERICES",
+              enName: "SERVICES",
               path: "/services"
             },
             jaName: "特長",
