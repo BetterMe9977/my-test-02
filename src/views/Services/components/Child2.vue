@@ -248,7 +248,7 @@ export default {
             title: "公共事業の販売・決済システム",
             client: {
               items1: {
-                sourceData: ["請負開発", "提案書作成!", "自社独自試験ツール"],
+                sourceData: ["請負開発", "提案書作成", "自社独自試験ツール"],
                 type: "Type1",
                 iconClass: "icon-ziyuan"
               },
@@ -264,7 +264,7 @@ export default {
                 sourceData: [
                   {
                     th: "プラットフォーム",
-                    p: ["Terasoluna、iOS、Android"]
+                    p: ["Flutter、iOS、Android"]
                   },
                   {
                     th: "開発言語",
