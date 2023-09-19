@@ -72,7 +72,7 @@ export default {
         {
           path: "/contact",
           title: "お問い合わせ",
-          enTite: "contact"
+          enTite: "Contact"
         }
       ]
     };
