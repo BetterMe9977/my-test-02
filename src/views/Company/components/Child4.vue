@@ -30,6 +30,13 @@
                   TEL. 0267-46-9877
                   <br />
                   <br />
+                  〒389-0207 長野県北佐久郡御代田町大字馬瀬口１４９７ー１７
+                  <br />
+                  カリビアンプラザ２０１室と１０５室
+                  <br />
+                  TEL: 0267-31-0097
+                  <br />
+                  <br />
                   〒224-0003 神奈川県横浜市都筑区中川中央１ー３５ー１６
                   <br />
                   マイキャッスルセンター北２０２室
@@ -59,12 +66,25 @@
           marginheight="0"
           marginwidth="0"
           class="map"
+          height="400px"
+          width="100%"
+          src="https://maps.google.com/maps?q=〒389-0207 長野県北佐久郡御代田町大字馬瀬口１４９７ー１７&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near&region=JP"
+          title="長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ２０１室と１０５室"
+          aria-label="長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ２０１室と１０５室"
           loading="lazy"
+        ></iframe>
+        <iframe
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          class="map"
           height="400px"
           width="100%"
           src="https://maps.google.com/maps?q=〒224-0003 神奈川県横浜市中川中央1-35-16 マイキャッスルセンター北202室&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near&region=JP"
           title="神奈川県横浜市都筑区中川中央１ー３５ー１６マイキャッスルセンター北２０２室"
           aria-label="神奈川県横浜市都筑区中川中央１ー３５ー１６マイキャッスルセンター北２０２室"
+          loading="lazy"
         ></iframe>
       </div>
     </section>
