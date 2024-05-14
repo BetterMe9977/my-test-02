@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <router-link class="header-logo" to="/">
-      <img class="logo-icon" :src="logoIcon" alt="" srcset="" />
+      <!-- <img class="logo-icon" :src="logoIcon" alt="" srcset="" /> -->
       <span class="logo-txt">株式会社軽井沢オッペンハイムグループ</span>
     </router-link>
     <nav class="nav">

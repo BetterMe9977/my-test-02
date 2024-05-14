@@ -58,13 +58,11 @@
           人事部　採用担当者
           <br />
           ① 電話：
-          <a href="tel:03-6206-0212">0267-46-9877(本社)</a>
-          <a href="tel:045-507-5873">0267-31-0097(長野支店)</a>
-          <a href="tel:045-507-5873">045-507-5873(横浜支店)</a>
+          <a href="tel:0267-41-6898">0267-41-6898(本社)</a>
           <br />
           ② Email：
-          <a href="mailto:dreamtank007@dreamtank.co.jp"
-            >dreamtank007@dreamtank.co.jp</a
+          <a href="mailto:yamato.chihara@oppenheim.co.jp"
+            >yamato.chihara@oppenheim.co.jp</a
           >
         </p>
         <p class="p4">
