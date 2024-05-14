@@ -25,10 +25,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
       }
     ],
-    title: `お問い合わせ | dreaMTank株式会社`
+    title: `お問い合わせ | 株式会社軽井沢オッペンハイムグループ`
   },
   name: "MyTest02Contact",
   components: {

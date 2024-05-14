@@ -58,7 +58,7 @@ export default {
       {
         name: "description",
         content:
-          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
       }
     ],
     title: "ニュース一覧 | スマート農業とARアプリ"

@@ -17,7 +17,7 @@
               <th>商号</th>
               <td>
                 <p>
-                  dreaMTank株式会社（略称：MT）
+                  株式会社軽井沢オッペンハイムグループ（略称：MT）
                 </p>
               </td>
             </tr>
@@ -98,10 +98,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社dreaMTank ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
       }
     ],
-    title: `アクセス | dreaMTank株式会社`
+    title: `アクセス | 株式会社軽井沢オッペンハイムグループ`
   },
   name: "MyTest02CompanyChild4",
 
