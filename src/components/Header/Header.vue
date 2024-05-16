@@ -2,7 +2,7 @@
   <header class="header">
     <router-link class="header-logo" to="/">
       <!-- <img class="logo-icon" :src="logoIcon" alt="" srcset="" /> -->
-      <span class="logo-txt">株式会社軽井沢オッペンハイムグループ</span>
+      <span class="logo-txt">千誠国際⽇本語学校</span>
     </router-link>
     <nav class="nav">
       <router-link

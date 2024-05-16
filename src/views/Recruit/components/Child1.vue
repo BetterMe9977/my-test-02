@@ -58,7 +58,7 @@
           人事部　採用担当者
           <br />
           ① 電話：
-          <a href="tel:0267-41-6898">0267-41-6898(本社)</a>
+          <a href="tel:0267-41-6898">0267-41-6898</a>
           <br />
           ② Email：
           <a href="mailto:yamato.chihara@oppenheim.co.jp"
@@ -100,10 +100,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "千誠国際⽇本語学校"
       }
     ],
-    title: `中途採用情報 | 株式会社軽井沢オッペンハイムグループ`
+    title: `中途採用情報 | 千誠国際⽇本語学校`
   },
   name: "MyTest02RecruitChild1",
   components: {

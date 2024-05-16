@@ -36,10 +36,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "千誠国際⽇本語学校"
       }
     ],
-    title: "株式会社軽井沢オッペンハイムグループ | スマート農業とARアプリ"
+    title: "千誠国際⽇本語学校"
   },
   name: "App",
   components: {

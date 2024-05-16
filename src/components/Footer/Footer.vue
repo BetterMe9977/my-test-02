@@ -6,13 +6,13 @@
     <div class="footer-content">
       <div class="left">
         <router-link class="left-logo" to="/">
-          <img class="logo-icon" :src="logoIcon" alt="" srcset="" />
-          <span class="logo-txt">株式会社軽井沢オッペンハイムグループ</span>
+          <!-- <img class="logo-icon" :src="logoIcon" alt="" srcset="" /> -->
+          <span class="logo-txt">千誠国際⽇本語学校</span>
         </router-link>
         <p class="info">
-          本社: 〒389-0111 
+          〒389-0207 
           <br />
-          長野県北佐久郡軽井沢町大字長倉５９３３ー１８
+          長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ
           <br />
           TEL: 0267-41-6898
           <br />

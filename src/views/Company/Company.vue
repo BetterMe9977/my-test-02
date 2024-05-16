@@ -26,10 +26,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "千誠国際⽇本語学校"
       }
     ],
-    title: `会社概要 | 株式会社軽井沢オッペンハイムグループ`
+    title: `会社概要 | 千誠国際⽇本語学校`
   },
   name: "MyTest02Company",
   components: {

@@ -17,7 +17,7 @@
               <th>商号</th>
               <td>
                 <p>
-                  株式会社軽井沢オッペンハイムグループ
+                  千誠国際⽇本語学校
                 </p>
               </td>
             </tr>
@@ -25,7 +25,7 @@
               <th>所在地</th>
               <td>
                 <p>
-                  〒389-0111 長野県北佐久郡軽井沢町大字長倉５９３３ー１８
+                  〒389-0207 長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ
                   <br />
                   TEL. 0267-41-6898
                   <br />
@@ -43,8 +43,8 @@
           height="400px"
           width="100%"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6425.395152456146!2d138.55440075561017!3d36.368103591937036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dd1e1ee2be0ef%3A0x16d8ddc9db507d82!2z44CSMzg5LTAxMTEg6ZW36YeO55yM5YyX5L2Q5LmF6YOh6Lu95LqV5rKi55S66ZW35YCJ5Y2D44Kx5rud6KW_5Yy677yV77yZ77yT77yT4oiS77yV!5e0!3m2!1sja!2sjp!4v1694777198703!5m2!1sja!2sjp"
-          title="長野県北佐久郡軽井沢町大字長倉５９３３ー１８"
-          aria-label="長野県北佐久郡軽井沢町大字長倉５９３３ー１８"
+          title="長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ"
+          aria-label="長野県北佐久郡御代田町大字馬瀬口１４９７ー１７カリビアンプラザ"
           loading="lazy"
         ></iframe>
       </div>
@@ -59,10 +59,10 @@ export default {
       {
         name: "description",
         content:
-          "株式会社軽井沢オッペンハイムグループ ITソリューション、ソフトウェア開発、アプリケーション開発"
+          "千誠国際⽇本語学校"
       }
     ],
-    title: `アクセス | 株式会社軽井沢オッペンハイムグループ`
+    title: `アクセス | 千誠国際⽇本語学校`
   },
   name: "MyTest02CompanyChild4",
 
