@@ -58,7 +58,7 @@
           人事部　採用担当者
           <br />
           ① 電話：
-          <a href="tel:0267-41-6898">0267-41-6898</a>
+          <a href="tel:0267-31-0097">0267-31-0097</a>
           <br />
           ② Email：
           <a href="mailto:yamato.chihara@oppenheim.co.jp"

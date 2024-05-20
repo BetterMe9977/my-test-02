@@ -13,7 +13,7 @@
               お電話でのお問い合わせはこちら
               <span class="tel">
                 <span class="iconfont icon-phone"></span>
-                0267-41-6898</span
+                0267-31-0097</span
               >
             </p>
           </div>
