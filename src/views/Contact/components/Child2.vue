@@ -51,18 +51,9 @@
               </tbody>
             </table>
             <div class="btn-gropu">
-              <input
-                type="submit"
-                @click="goBackHandler"
-                value="≪ 戻る"
-                class="sub-btn"
-              />
+              <input type="submit" @click="goBackHandler" value="≪ 戻る" class="sub-btn" />
               &nbsp;
-              <input
-                @click="finishtHandler"
-                value="この内容で送信する ≫"
-                class="cel-btn"
-              />
+              <input @click="finishHandler" value="この内容で送信する ≫" class="cel-btn" />
             </div>
           </div>
         </div>
@@ -73,6 +64,8 @@
 
 <script>
 import Step from "@/components/Step/Step";
+import axios from 'axios';
+
 export default {
   metaInfo: {
     meta: [
@@ -95,10 +88,12 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      message: ''
+    };
   },
 
-  mounted() {},
+  mounted() { },
 
   methods: {
     goBackHandler() {
@@ -107,27 +102,47 @@ export default {
         formData: this.formData
       });
     },
-    finishtHandler() {
-      // console.log(this.formData);
-      // fetch("https://www.oppenheim.co.jp/api/email/send-email", {
-      //   // fetch("http://localhost:3444/send-email", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json" // 设置请求头为JSON格式
-      //   },
-      //   body: JSON.stringify(this.formData)
-      // })
-      //   .then(res => res.json())
-      //   .then(res => {
-      //     // 送信成功
-      //     if (res.data.code === 200) {
-      //       // 原网站没有送信后是否成功的交互，暂时留个缺口
-      //     }
-      //   });
-      this.$emit("currentIndexHandler", {
-        Child2: "Child3",
-        formData: this.formData
-      });
+    // finishtHandler() {
+
+    //   const response = axios.post('/static/send_email.php', {
+    //       email: this.formData.email,
+    //       name: this.formData.name,
+    //     });
+    //   alert(response.data.message);
+
+
+    //   this.$emit("currentIndexHandler", {
+    //     Child2: "Child3",
+    //     formData: this.formData
+    //   });
+    // }
+    async finishHandler() {
+      try {
+        const formData = new FormData();
+        formData.append('company_name', this.formData.company_name);
+        formData.append('name', this.formData.name);
+        formData.append('name2', this.formData.name2);
+        formData.append('email', this.formData.email);
+        formData.append('phone', this.formData.phone);
+        formData.append('text', this.formData.text);
+
+        const response = await axios.post('/static/send_email.php', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+
+        this.message = response.data;
+        alert(response.data);
+        this.$emit("currentIndexHandler", {
+          Child2: "Child3",
+          formData: this.formData
+        });
+      } catch (error) {
+        console.error('There was an error sending the email:', error);
+        this.message = 'メールの送信に失敗しました';
+        alert(this.message);
+      }
     }
   }
 };
