@@ -1,7 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
 // 包含PHPMailer文件
 require 'vendor/PHPMailer/src/Exception.php';
 require 'vendor/PHPMailer/src/PHPMailer.php';
@@ -12,17 +9,16 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $data = json_decode(file_get_contents('php://input'), true);
+    // 从输入流中获取原始POST数据
+    $rawData = file_get_contents("php://input");
+    $input = json_decode($rawData, true);
 
-    $name = $data['name'] ?? '';
-    $email = $data['email'] ?? '';
-    $age = $data['age'] ?? '';
-    $feedback = $data['feedback'] ?? '';
-    
-    if (empty($name) || empty($email) || empty($age) || empty($feedback)) {
-        echo json_encode(['message' => '所有字段都是必填项']);
-        exit;
-    }
+    $company_name = $input['company_name'] ?? '';
+    $name = $input['name'] ?? '';
+    $name2 = $input['name2'] ?? '';
+    $email = $input['email'] ?? '';
+    $phone = $input['phone'] ?? '';
+    $text = $input['text'] ?? '';
 
     $mail = new PHPMailer(true);
 
@@ -38,13 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // 收件人设置
         $mail->setFrom($email, $name);
-        $mail->addAddress('nutletor@gmail.com'); // 添加收件人
+        $mail->addAddress('dreamtank007@dreamtank.co.jp'); // 添加收件人
 
         // 内容
         $mail->isHTML(true);
-        $mail->Subject = '调查问卷反馈';
-        $mail->Body    = "姓名: $name<br>电子邮件: $email<br>年龄: $age<br>反馈:<br>$feedback";
-        $mail->AltBody = "姓名: $name\n电子邮件: $email\n年龄: $age\n反馈:\n$feedback";
+        $mail->Subject = 'dreaMTank Contact Us';
+        $mail->Body    = "御社名: $company_name<br> お名前: $name<br> フリガナ: $name2<br> mail: $email<br> 電話番号: $phone<br> お問い合わせ内容:<br>$text";
+        $mail->AltBody = "御社名: $company_name\n お名前: $name\n フリガナ: $name2\n mail: $email\n 電話番号: $phone\n お問い合わせ内容:\n$text";
 
         $mail->send();
         echo '邮件发送成功';

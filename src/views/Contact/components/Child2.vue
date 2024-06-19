@@ -89,7 +89,6 @@ export default {
 
   data() {
     return {
-      message: ''
     };
   },
 
@@ -102,46 +101,28 @@ export default {
         formData: this.formData
       });
     },
-    // finishtHandler() {
-
-    //   const response = axios.post('/static/send_email.php', {
-    //       email: this.formData.email,
-    //       name: this.formData.name,
-    //     });
-    //   alert(response.data.message);
-
-
-    //   this.$emit("currentIndexHandler", {
-    //     Child2: "Child3",
-    //     formData: this.formData
-    //   });
-    // }
+    
     async finishHandler() {
       try {
-        const formData = new FormData();
-        formData.append('company_name', this.formData.company_name);
-        formData.append('name', this.formData.name);
-        formData.append('name2', this.formData.name2);
-        formData.append('email', this.formData.email);
-        formData.append('phone', this.formData.phone);
-        formData.append('text', this.formData.text);
-
-        const response = await axios.post('/static/send_email.php', formData, {
+        const response = await axios.post('/static/send_email.php', {
+          company_name: this.formData.company_name,
+          name: this.formData.name,
+          name2: this.formData.name2,
+          email: this.formData.email,
+          phone: this.formData.phone,
+          text: this.formData.text
+        }, {
           headers: {
-            'Content-Type': 'multipart/form-data'
+            'Content-Type': 'application/json'
           }
         });
 
-        this.message = response.data;
-        alert(response.data);
         this.$emit("currentIndexHandler", {
           Child2: "Child3",
           formData: this.formData
         });
       } catch (error) {
-        console.error('There was an error sending the email:', error);
-        this.message = 'メールの送信に失敗しました';
-        alert(this.message);
+        alert('邮件发送失败: ' + error.response.data);
       }
     }
   }
