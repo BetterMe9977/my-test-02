@@ -6,6 +6,8 @@ import Company from "@/views/Company/Company";
 import Recruit from "@/views/Recruit/Recruit";
 import Contact from "@/views/Contact/Contact";
 import NewsList from "@/views/NewsList/NewsList";
+import School from "@/views/School/School";
+
 Vue.use(Router);
 
 export default new Router({
@@ -413,6 +415,16 @@ export default new Router({
           redirect: "lists"
         }
       ]
+    },
+    // school
+    {
+      path: "/school",
+      name: "School",
+      meta: {
+        jaName: "お問い合わせ",
+        enName: "CONTACT"
+      },
+      component: School
     },
     {
       path: "/",

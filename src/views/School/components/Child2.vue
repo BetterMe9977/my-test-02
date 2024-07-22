@@ -111,7 +111,7 @@ export default {
           email: this.formData.email,
           phone: this.formData.phone,
           text: this.formData.text,
-          mail_to: "dreamtank007@dreamtank.co.jp"
+          mail_to: "chiseischool@dreamtank.co.jp"
         }, {
           headers: {
             'Content-Type': 'application/json'

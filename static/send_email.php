@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $input['email'] ?? '';
     $phone = $input['phone'] ?? '';
     $text = $input['text'] ?? '';
+    $mail_to = $input['mail_to'] ?? '';
 
     $mail = new PHPMailer(true);
 
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // 收件人设置
         $mail->setFrom($email, $name);
-        $mail->addAddress('dreamtank007@dreamtank.co.jp'); // 添加收件人
+        $mail->addAddress($mail_to); // 添加收件人
 
         // 内容
         $mail->isHTML(true);
