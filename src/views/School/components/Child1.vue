@@ -13,8 +13,7 @@
               お電話でのお問い合わせはこちら
               <span class="tel">
                 <span class="iconfont icon-phone"></span>
-                0267-31-0097</span
-              >
+                </span>
             </p>
           </div>
           <Step currentEle="Child1" />
