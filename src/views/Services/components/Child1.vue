@@ -119,10 +119,6 @@
         <ul class="ul1">
           <li>
             <span class="iconfont">&#xe601;</span>
-            一般派遣契約
-          </li>
-          <li>
-            <span class="iconfont">&#xe601;</span>
             SE準委任契約
           </li>
           <li>
@@ -159,10 +155,6 @@
       <div class="section-right">
         <h2 class="title">オフショア開発及び中国進出支援事業</h2>
         <ul class="ul2">
-          <li>
-            <span class="iconfont">&#xe601;</span>
-            一般派遣契約
-          </li>
           <li>
             <span class="iconfont">&#xe601;</span>
             SE準委任契約
